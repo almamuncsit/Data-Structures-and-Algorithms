@@ -1,14 +1,14 @@
 
 if __name__ == '__main__':
-    dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
-    print("dict['Name']: ", dict['Name'])
-    print("dict['Age']: ", dict['Age'])
+    pyt_dict = {'name': 'Mamun Sarkar', 'age': 26, 'class': 'First class'}
+    print("pyt_dict['name']: ", pyt_dict['name'])
+    print("pyt_dict['age']: ", pyt_dict['age'])
 
-    dict['Age'] = 8  # update existing entry
-    dict['School'] = "DPS School"  # Add new entry
+    pyt_dict['age'] = 8  # update existing entry
+    pyt_dict['School'] = "DPS School"  # Add new entry
 
-    print("dict['School']: ", dict['School'])
-    print("dict['Age']: ", dict['Age'])
+    print("pyt_dict['School']: ", pyt_dict['School'])
+    print("pyt_dict['age']: ", pyt_dict['age'])
 
-    del dict['Name']
-    print(dict)
+    del pyt_dict['name']
+    print(pyt_dict)

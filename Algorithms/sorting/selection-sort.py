@@ -1,22 +1,28 @@
+from typing import List
+
+
 class Sort:
-	def selectionSort(self, list):
-		for i in range(len(list)):
-			for j in range(i+1, len(list)):
-				if list[i] > list[j]:
-					list[i], list[j] = list[j], list[i]
+    def selection_sort(self, items: List[int]):
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                if items[i] > items[j]:
+                    items[i], items[j] = items[j], items[i]
+
+    def selection_sort_another(self, items: List[int]):
+        for i in range(len(items)):
+            min_index = i
+            for j in range(i + 1, len(items)):
+                if items[min_index] > items[j]:
+                    min_index = j
+            if min_index > i:
+                items[i], items[min_index] = items[min_index], items[i]
 
 
-	def selectionSort2(self, list):
-		for i in range(len(list)):
-			min = i
-			for j in range(i+1, len(list)):
-				if list[min] > list[j]:
-					min = j
-			if min > i:
-				list[i], list[min] = list[min], list[i]
-
-
-list = [19,2,31,45,6,11,121,27]
+items = [190, 20, 310, 450, 60, 110, 121, 270]
 sort = Sort()
-sort.selectionSort2(list)
-print(list)
+
+print('Before Sort')
+print(items)
+sort.selection_sort_another(items)
+print('After Sort')
+print(items)

@@ -1,4 +1,4 @@
-class Stack():
+class Stack:
     def __init__(self):
         self.stack = []
 
@@ -17,20 +17,20 @@ class Stack():
 
 
 if __name__ == '__main__':
-    stack = Stack()
-    stack.push('One')
-    stack.push('Two')
-    stack.push('Three')
-    stack.push('Four')
+    my_stack = Stack()
+    my_stack.push('First')
+    my_stack.push('Second')
+    my_stack.push('Third')
+    my_stack.push('Fourth')
 
     print('-- Before pop --')
-    stack.print_stack()
+    my_stack.print_stack()
 
     print('-- Start pop --')
-    print(stack.pop())
+    print(my_stack.pop())
     print('-- After pop -- ')
-    stack.print_stack()
+    my_stack.print_stack()
 
     print('-- After pop -- ')
-    print(stack.pop())
-    stack.print_stack()
+    print(my_stack.pop())
+    my_stack.print_stack()

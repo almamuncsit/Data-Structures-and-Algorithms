@@ -1,23 +1,23 @@
 import collections
 
-DoubleEnded = collections.deque(["Mon","Tue","Wed"])
+double_ended_queue = collections.deque(["Mon", "Tue", "Wed"])
 
-DoubleEnded.append("Thu")
+double_ended_queue.append("Thu")
 
-print ("Appended at right - ")
-print (DoubleEnded)
+print("Appended at right - ")
+print(double_ended_queue)
 
-DoubleEnded.appendleft("Sun")
+double_ended_queue.appendleft("Sun")
 
-print ("Appended at right at left is - ")
-print (DoubleEnded)
+print("Appended at right at left is - ")
+print(double_ended_queue)
 
-DoubleEnded.pop()
+double_ended_queue.pop()
 
-print ("Deleting from right - ")
-print (DoubleEnded)
+print("Deleting from right - ")
+print(double_ended_queue)
 
-DoubleEnded.popleft()
+double_ended_queue.popleft()
 
-print ("Deleting from left - ")
-print (DoubleEnded)
+print("Deleting from left - ")
+print(double_ended_queue)

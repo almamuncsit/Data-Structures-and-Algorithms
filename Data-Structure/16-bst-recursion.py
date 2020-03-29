@@ -1,41 +1,40 @@
 class Node:
 
-    def __init__(self, data):
-        self.left = None
-        self.right = None
-        self.data = data
+    def __init__(self, node_data):
+        self.left_node = None
+        self.right_node = None
+        self.node_data = node_data
 
-    def insert(self, data):
-        if self.data:
-            if data < self.data:
-                if self.left is None:
-                    self.left = Node(data)
+    def insert(self, node_data):
+        if self.node_data:
+            if node_data < self.node_data:
+                if self.left_node is None:
+                    self.left_node = Node(node_data)
                 else:
-                    self.left.insert(data)
-            elif data > self.data:
-                if self.right is None:
-                    self.right = Node(data)
+                    self.left_node.insert(node_data)
+            elif node_data > self.node_data:
+                if self.right_node is None:
+                    self.right_node = Node(node_data)
                 else:
-                    self.right.insert(data)
+                    self.right_node.insert(node_data)
         else:
-            self.data = data
+            self.node_data = node_data
+
+    def print_bst(self):
+        if self.left_node:
+            self.left_node.print_bst()
+        print(self.node_data)
+        if self.right_node:
+            self.right_node.print_bst()
 
 
-    def PrintTree(self):
-        if self.left:
-            self.left.PrintTree()
-        print(self.data)
-        if self.right:
-            self.right.PrintTree()
+root = Node(70)
+root.insert(60)
+root.insert(80)
+root.insert(50)
+root.insert(90)
+root.insert(20)
+root.insert(120)
+root.insert(30)
 
-
-root = Node(7)
-root.insert(6)
-root.insert(8)
-root.insert(5)
-root.insert(9)
-root.insert(2)
-root.insert(12)
-root.insert(3)
-
-root.PrintTree()
+root.print_bst()

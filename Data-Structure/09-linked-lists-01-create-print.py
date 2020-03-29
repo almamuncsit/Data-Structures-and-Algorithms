@@ -1,28 +1,28 @@
-class Node():
+class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
 
 
-class SLinkedList():
+class SLinkedList:
     def __init__(self):
         self.head = None
 
-    def printList(self):
-        printVal = self.head
-        while printVal is not None:
-            print(printVal.data)
-            printVal = printVal.next
+    def print_list(self):
+        print_val = self.head
+        while print_val is not None:
+            print(print_val.data)
+            print_val = print_val.next
 
 
 if __name__ == "__main__":
-    list = SLinkedList()
-    list.head = Node("Sat")
+    test_list = SLinkedList()
+    test_list.head = Node("Saturday")
 
-    e1 = Node("Sun")
-    e2 = Node("Mon")
+    e1 = Node("Sunday")
+    e2 = Node("Monday")
 
-    list.head.next = e1
+    test_list.head.next = e1
     e1.next = e2
 
-    list.printList()
+    test_list.print_list()

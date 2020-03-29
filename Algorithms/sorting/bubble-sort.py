@@ -1,12 +1,15 @@
 class Sort:
-	def bubblesort(self, list):
-		for n in range(len(list)-1, 0, -1):
-			for i in range(0, n):
-				if list[i] > list[i+1]:
-					list[i+1], list[i] = list[i], list[i+1]	
+    def bubblesort(self, items):
+        for n in range(len(items) - 1, 0, -1):
+            for i in range(0, n):
+                if items[i] > items[i + 1]:
+                    items[i + 1], items[i] = items[i], items[i + 1]
 
 
-list = [19,2,31,45,6,11,121,27]
+items = [190, 20, 310, 450, 60, 110, 121, 270]
 sort = Sort()
-sort.bubblesort(list)
-print(list)
+print('Before Sort')
+print(items)
+sort.bubblesort(items)
+print('After Sort')
+print(items)

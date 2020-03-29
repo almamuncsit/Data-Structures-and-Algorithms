@@ -1,10 +1,10 @@
 
 import collections
 
-dict1 = {'day1': 'Mon', 'day2': 'Tue'}
-dict2 = {'day3': 'Wed', 'day1': 'Thu'}
+my_dict = {'day1': 'Monday', 'day2': 'Tuesday'}
+py_dict = {'day3': 'Wednesday', 'day1': 'Thursday'}
 
-res = collections.ChainMap(dict1, dict2)
+res = collections.ChainMap(my_dict, py_dict)
 
 # Creating a single dictionary
 print(res.maps, '\n')
@@ -24,5 +24,5 @@ print('day3 in res: {}'.format(('day3' in res)))
 print('day4 in res: {}'.format(('day4' in res)))
 
 
-res2 = collections.ChainMap(dict2, dict1)
+res2 = collections.ChainMap(py_dict, my_dict)
 print(res2.maps, '\n')

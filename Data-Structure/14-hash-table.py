@@ -1,21 +1,19 @@
-# Declare a dictionary 
-dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+# Declare a hashtable using dictionary
+hash_table = {'name': 'Mamun', 'age': 26, 'class': 'First Class'}
 
 # Accessing the dictionary with its key
-print ("dict['Name']: ", dict['Name'])
-print ("dict['Age']: ", dict['Age'])
+print("hash_table['name']: ", hash_table['name'])
+print("hash_table['age']: ", hash_table['age'])
 
-# Declare a dictionary
-dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
-dict['Age'] = 8; # update existing entry
-dict['School'] = "DPS School"; # Add new entry
-print ("dict['Age']: ", dict['Age'])
-print ("dict['School']: ", dict['School'])
 
-print(dict)
-del dict['Name']; # remove entry with key 'Name'
-print(dict)
-dict.clear();     # remove all entries in dict
-print(dict)
-del dict ;        # delete entire dictionary
-print(dict)
+hash_table['age'] = 8  # update existing entry
+hash_table['School'] = "DPS School"  # Add new entry
+print("hash_table['age']: ", hash_table['age'])
+print("hash_table['School']: ", hash_table['School'])
+
+print(hash_table)
+del hash_table['name']  # remove entry with key 'name'
+print(hash_table)
+hash_table.clear()  # remove all entries in hash_table
+print(hash_table)
+del hash_table  # delete entire dictionary

@@ -1,5 +1,8 @@
+from typing import List
+
+
 class Sort:
-    def marge_sort(self, items):
+    def marge_sort(self, items: List[int]):
         if len(items) <= 1:
             return items
         middle = len(items) // 2
@@ -24,7 +27,10 @@ class Sort:
         return temp_arr
 
 
-items = [19, 2, 31, 45, 6, 11, 121, 27]
+items = [109, 20, 301, 405, 60, 101, 121, 207]
 sort = Sort()
+print('Before Sort')
+print(items)
 items = sort.marge_sort(items)
+print('After Sort')
 print(items)
