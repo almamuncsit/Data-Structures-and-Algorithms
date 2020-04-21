@@ -11,9 +11,8 @@ class Fibonacci():
             return self.fib_data[n]
         if n in [1, 2]:
             return 1
-        self.fib_data[n] = self.finbonacci(n-1) + self.finbonacci(n-2)
+        self.fib_data[n] = self.finbonacci(n - 1) + self.finbonacci(n - 2)
         return self.fib_data[n]
-
 
     def unit_test(self):
         assert self.finbonacci(1) == 1
@@ -25,16 +24,14 @@ class Fibonacci():
         assert self.finbonacci(7) == 13
         assert self.finbonacci(8) == 21
 
-
     def main(self):
         n = int(input())
-        self.fib_data = [False]*(n+1)
+        self.fib_data = [False] * (n + 1)
         self.unit_test()
-        print( 'Fibonacci: ', self.finbonacci(n) )
+        print('Fibonacci: ', self.finbonacci(n))
 
 
 if __name__ == '__main__':
     fibonacci = Fibonacci()
     fibonacci.main()
     print("Total Iteration: ", fibonacci.i)
-
